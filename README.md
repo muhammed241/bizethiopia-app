@@ -11,29 +11,47 @@ A full-stack MVP business management app for a small business in Ethiopia.
 - WhatsApp order list
 - SQLite persistence
 - React + Express architecture
+- Production Docker image with persistent database volume
+- API health check at `/api/health`
 
 ## Run locally
 
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+npm run dev
+```
 
-2. Start the app:
-   ```bash
-   npm run dev
-   ```
+Open `http://localhost:5173`.
 
-3. Open the app in your browser:
-   ```bash
-   http://localhost:5173
-   ```
+## Run production build locally
 
-## Stack
-- React
-- Vite
-- Express
-- SQLite
+```bash
+npm install
+npm run build
+npm start
+```
+
+Open `http://localhost:3001`.
+
+## Run with Docker
+
+```bash
+docker compose up --build
+```
+
+Open `http://localhost:3001`.
+
+SQLite data is persisted in the `bizethiopia-data` Docker volume.
+
+## API
+
+- `GET /api/health`
+- `GET /api/dashboard`
+- `POST /api/products`
+- `POST /api/sales`
+- `POST /api/expenses`
+- `POST /api/customers`
+- `POST /api/orders`
 
 ## Notes
-This is a working MVP for local demo and development. It is not yet a production-grade multi-user SaaS system.
+This is a working MVP for local demo and development. Authentication, role-based access, payment-provider integration, WhatsApp webhooks, backups, and PostgreSQL migration are still required before production SaaS deployment.
