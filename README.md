@@ -1,17 +1,39 @@
-# BizEthiopia Mobile-First App Prototype
+# BizEthiopia App
 
-A functional front-end prototype based on the uploaded BizEthiopia Product Vision:
-- Mobile dashboard: sales, expenses, estimated profit, stock alerts and debts
-- Sales/POS: products, quantities, discounts, Cash, Telebirr, CBE Birr and Credit
-- Digital receipt-ready sales flow
-- Inventory and low-stock alerts
-- Customers and debt balances
+A full-stack MVP business management app for a small business in Ethiopia.
+
+## Features
+- Sales dashboard
+- Product inventory tracking
+- Low-stock alerts
+- Customer debt tracking
 - Expense tracking
-- Reports and business insights
-- WhatsApp order workflow prototype
-- Notifications/automation concepts
-- Staff roles and permissions
-- Settings with English, Amharic and Oromo options
-- Local browser persistence with localStorage
+- WhatsApp order list
+- SQLite persistence
+- React + Express architecture
 
-Open `index.html` in a browser. This is a prototype, not a production backend.
+## Run locally
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Start the app:
+   ```bash
+   npm run dev
+   ```
+
+3. Open the app in your browser:
+   ```bash
+   http://localhost:5173
+   ```
+
+## Stack
+- React
+- Vite
+- Express
+- SQLite
+
+## Notes
+This is a working MVP for local demo and development. It is not yet a production-grade multi-user SaaS system.
