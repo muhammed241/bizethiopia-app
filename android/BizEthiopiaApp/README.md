@@ -1,34 +1,32 @@
-# Android Studio / Gradle project for BizEthiopia
+# BizEthiopia Android App
 
-This folder contains a real Android app project for BizEthiopia built with Kotlin and Jetpack Compose.
+This app is a real Kotlin + Jetpack Compose Android application for the BizEthiopia business manager.
 
-## Structure
-- `settings.gradle.kts`
-- `build.gradle.kts`
-- `app/build.gradle.kts`
-- `app/src/main/...`
+## Included features
+- Login screen
+- Dashboard with KPIs
+- Inventory management
+- Sales entry
+- Customer debt tracking
+- Orders view
+- Material 3 mobile-first design
+- Ready to build into an APK in Android Studio
 
 ## Open in Android Studio
-1. Open Android Studio
-2. Choose "Open"
-3. Select this folder: `android/BizEthiopiaApp`
-4. Let Gradle sync
-5. Build and run on an emulator or connected device
+- Open Android Studio
+- Choose `Open`
+- Select this folder: `android/BizEthiopiaApp`
+- Let Gradle sync
+- Build and run the app
 
-## Features
-- Sales dashboard
-- Expense tracking
-- Inventory overview
-- Customer debts
-- Orders view
-- Mobile-first design
-- Material 3 UI
-
-## Installable APK
-Once the project is synced and the Android SDK is available, you can build a debug APK from Android Studio or run:
-
+## Build APK
 ```bash
+cd android/BizEthiopiaApp
 ./gradlew assembleDebug
 ```
 
-The APK will be generated in `app/build/outputs/apk/debug/`.
+The signed or debug APK will be generated under:
+- `app/build/outputs/apk/debug/`
+
+## App login
+Demo login values are included in the app UI and can be used for testing.
