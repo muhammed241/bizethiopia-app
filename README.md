@@ -1,17 +1,57 @@
-# BizEthiopia Mobile-First App Prototype
+# BizEthiopia App
 
-A functional front-end prototype based on the uploaded BizEthiopia Product Vision:
-- Mobile dashboard: sales, expenses, estimated profit, stock alerts and debts
-- Sales/POS: products, quantities, discounts, Cash, Telebirr, CBE Birr and Credit
-- Digital receipt-ready sales flow
-- Inventory and low-stock alerts
-- Customers and debt balances
+A full-stack MVP business management app for a small business in Ethiopia.
+
+## Features
+- Sales dashboard
+- Product inventory tracking
+- Low-stock alerts
+- Customer debt tracking
 - Expense tracking
-- Reports and business insights
-- WhatsApp order workflow prototype
-- Notifications/automation concepts
-- Staff roles and permissions
-- Settings with English, Amharic and Oromo options
-- Local browser persistence with localStorage
+- WhatsApp order list
+- SQLite persistence
+- React + Express architecture
+- Production Docker image with persistent database volume
+- API health check at `/api/health`
 
-Open `index.html` in a browser. This is a prototype, not a production backend.
+## Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+Open `http://localhost:5173`.
+
+## Run production build locally
+
+```bash
+npm install
+npm run build
+npm start
+```
+
+Open `http://localhost:3001`.
+
+## Run with Docker
+
+```bash
+docker compose up --build
+```
+
+Open `http://localhost:3001`.
+
+SQLite data is persisted in the `bizethiopia-data` Docker volume.
+
+## API
+
+- `GET /api/health`
+- `GET /api/dashboard`
+- `POST /api/products`
+- `POST /api/sales`
+- `POST /api/expenses`
+- `POST /api/customers`
+- `POST /api/orders`
+
+## Notes
+This is a working MVP for local demo and development. Authentication, role-based access, payment-provider integration, WhatsApp webhooks, backups, and PostgreSQL migration are still required before production SaaS deployment.
